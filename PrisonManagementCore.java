@@ -311,7 +311,6 @@ public class PrisonManagementCore extends JFrame implements ActionListener {
 		}
 	}
 
-	// Search Prisoner by ID
 	// Search Prisoner by ID only
 private void searchPrisonerById() {
     String id = txtSearchTerm.getText().trim();
@@ -375,36 +374,6 @@ private void searchPrisonerById() {
     
     txtSearchResults.setText(results.toString());
 }
-
-
-	// Search Prisoner by Name
-	private void searchPrisonerByName() {
-		String name = txtSearchTerm.getText().trim();
-		if (name.isEmpty()) {
-			txtSearchResults.setText("Please enter a name to search!");
-			return;
-		}
-
-		StringBuilder results = new StringBuilder();
-		results.append("SEARCH RESULTS (By Name):\n");
-		results.append("=".repeat(50)).append("\n\n");
-
-		int count = 0;
-		for (Prisoner p : prisoners) {
-			if (p.matchesName(name)) {
-				results.append(p.getFormattedInfo()).append("\n\n");
-				count++;
-			}
-		}
-
-		if (count == 0) {
-			results.append("No prisoners found with name containing: ").append(name);
-		} else {
-			results.insert(results.indexOf("\n\n"), " (" + count + " found)");
-		}
-
-		txtSearchResults.setText(results.toString());
-	}
 
 	// Show All Prisoners
 	private void showAllPrisoners() {

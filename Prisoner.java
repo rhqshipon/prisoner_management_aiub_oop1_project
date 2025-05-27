@@ -50,8 +50,7 @@ public class Prisoner {
     
     // Convert to TSV format
     public String toTSVString() {
-        return prisonerId + "\t" + name + "\t" + age + "\t" + 
-               yearAdmitted + "\t" + sentenceYears + "\t" + reason;
+        return prisonerId + "\t" + name + "\t" + age + "\t" + yearAdmitted + "\t" + sentenceYears + "\t" + reason;
     }
     
     // Get TSV header for file
