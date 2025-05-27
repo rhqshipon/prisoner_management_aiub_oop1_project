@@ -257,8 +257,7 @@ public class PrisonManagementCore extends JFrame implements ActionListener {
 			String reason = txtReason.getText().trim();
 
 			// Validation
-			if (name.isEmpty() || ageStr.isEmpty() || yearStr.isEmpty() ||
-					sentenceStr.isEmpty() || reason.isEmpty()) {
+			if (name.isEmpty() || ageStr.isEmpty() || yearStr.isEmpty() || sentenceStr.isEmpty() || reason.isEmpty()) {
 				JOptionPane.showMessageDialog(this, "Please fill all fields!", "Error", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
@@ -276,8 +275,7 @@ public class PrisonManagementCore extends JFrame implements ActionListener {
 			if (newPrisoner.isValid()) {
 				prisoners.add(newPrisoner);
 				savePrisonersToFile();
-				JOptionPane.showMessageDialog(this, "Prisoner added successfully!\nID: " + id, "Success",
-						JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(this, "Prisoner added successfully!\nID: " + id, "Success", JOptionPane.INFORMATION_MESSAGE);
 				clearAddFields();
 			} else {
 				JOptionPane.showMessageDialog(this, "Invalid prisoner data!", "Error", JOptionPane.ERROR_MESSAGE);
