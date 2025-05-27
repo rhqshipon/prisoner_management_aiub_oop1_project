@@ -14,8 +14,7 @@ public class Prisoner {
     }
     
     // Parameterized constructor
-    public Prisoner(String prisonerId, String name, int age, int yearAdmitted, 
-                   int sentenceYears, String reason) {
+    public Prisoner(String prisonerId, String name, int age, int yearAdmitted, int sentenceYears, String reason) {
         this.prisonerId = prisonerId;
         this.name = name;
         this.age = age;
