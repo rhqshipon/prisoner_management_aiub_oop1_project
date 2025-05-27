@@ -230,23 +230,6 @@ public class Prisoner {
         return getFormattedInfo();
     }
     
-    // Override equals for comparison (based on prisoner ID)
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        
-        Prisoner prisoner = (Prisoner) obj;
-        return prisonerId != null ? prisonerId.equals(prisoner.prisonerId) : 
-               prisoner.prisonerId == null;
-    }
-    
-    // Override hashCode
-    @Override
-    public int hashCode() {
-        return prisonerId != null ? prisonerId.hashCode() : 0;
-    }
-    
     // Create a copy of the prisoner
     public Prisoner copy() {
         return new Prisoner(prisonerId, name, age, yearAdmitted, sentenceYears, reason);
